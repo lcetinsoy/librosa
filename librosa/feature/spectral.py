@@ -153,9 +153,10 @@ def spectral_centroid(
     Plot the result
 
     >>> import matplotlib.pyplot as plt
+    >>> import librosa.display as lrd
     >>> times = librosa.times_like(cent)
     >>> fig, ax = plt.subplots()
-    >>> librosa.display.specshow(librosa.amplitude_to_db(S, ref=np.max),
+    >>> lrd.specshow(librosa.amplitude_to_db(S, ref=np.max),
     ...                          y_axis='log', x_axis='time', ax=ax)
     >>> ax.plot(times, cent.T, label='Spectral centroid', color='w')
     >>> ax.legend(loc='upper right')
